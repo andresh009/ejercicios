@@ -1,0 +1,99 @@
+BUSCAR TEXTO DENTRO DE ARCHIVOS
+
+grep permite buscar patrones o palabras dentro de archivos 
+
+grep "texto" archivo
+
+-i - ignora mayusculas/minusculas 
+-r - busca recursivamente en directorios
+-n - mustra numero de linea
+-v - muestra lineas que no contienen 
+
+grep -i "linux" archivo.txt
+
+BUSCAR ARCHIVOS EN EL SISTEMA 
+
+find buscar archivos y directorios segun diferente criterios 
+
+find ruta opciones 
+
+	BUSCAR POR NOMBRES -> find /home -name "archivo.txt"
+	BUSCAR ARCHIVOS .LOG -> find . -name "*.log"
+	BUSCAR POR TAMANO -> find . size +10M
+	BUSCAR Y EJECUTAR COMANDO -> find . -name "*.tmp" -delete 
+
+ORDENAR TEXTO
+
+ordena lineas de texto
+
+sort archivo.txt
+
+	EJEMPLO
+
+	ORDEN ALFABETICO -> sort nombre.txt
+	ORDEN NUMERICO -> sort -n numeros.txt
+	ORDEN INVERSO -> sort -r archivo.txt
+
+ELIMINAR LINEAS DUPLICADAS 
+
+uniq elimina lineas repetidas consecutivas (normalmente se usa sort)
+
+sort nombres.txt | uniq 
+	
+	EJEMPLO
+	
+	CONTAR REPETICIONES -> sort nombres.txt | uniq -c 
+
+
+CONTAR INFORMACION  DE UN ARCHIVO
+
+cuenta lineas,palabras y caracteres 
+
+wc archivo.txt
+
+-l - contar lineas
+-w - contar palabras 
+-c - contar caracteres 
+
+EXTRAER COLUMNAS DE TEXTO 
+
+sirve para extraer partes especificas de cada linea 
+
+cut -d "delimitador" -f campo archivo
+
+	EJEMPLO
+	
+	usuario.txt:
+
+	juan:25:argentina
+	ana:30:chile
+	
+	EXTRAE NOMBRE -> cut -d ":" -f1 usuario.txt 
+	
+	juan 
+	ana
+
+PROCESAMIENTO AVANZADO DE TEXTO
+
+awk permite analizar columnas y aplicar logica 
+
+	EJEMPLO
+	
+	awk '{print $1}' archivo.txt
+	awk '{print $1, $2}' archivo.txt
+	FILTRAR POR CONDICION -> awk '$2 > 25' archivo.txt
+		
+EDITAR TEXTO AUTOMATICAMENTE 
+
+sed permite buscar y reemplazar texto
+
+sed 's/texto/vreemplazo/' archivo
+
+
+	EJEMPLO
+	
+	sed 's/linux/Linux/' archivo.txt
+	REEMPLAZAR TODAS LAS COINCIDENCIAS -> sed 's/linux/Linux/g' archivo.txt
+	GUARDAR CAMBIOS EN EL ARCHIVO -> sed -i 's/error/ERROR/g' log.txt
+
+	

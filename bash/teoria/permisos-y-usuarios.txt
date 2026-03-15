@@ -1,0 +1,44 @@
+En Linux cada archivo o carpeta tiene permisos que determinan quién puede leer, modificar o ejecutar.
+
+3 tipos de usuarios
+
+u-user-dueño del equipo 
+g-gruop-grupo al que pertenece
+o-others-todos los demas usuarios 
+
+3 tipo de permisos 
+
+r-lectura-ver contenido
+w-escritura-modificar el archivo
+x-ejecucion-ejecutar el archivo
+
+EJEMPLO
+
+ls -l archivo.sh ------> -rwxr-xr-- 1 usuario grupo 1200 archivo.sh
+
+rwx  → usuario puede leer, escribir y ejecutar
+r-x  → grupo puede leer y ejecutar
+r--  → otros solo pueden leer
+
+CAMBIAR PERMISOS
+
+chmod ---> modificar los permisos de archivos y directorios
+
+	EJEMPLOS
+	
+	chmod u+x script.sh
+	
+	u-usuario
+	+-agregar permiso
+	x-ejecutar
+
+	chmod g-w archivo.txt
+
+METODO NUMERICO 
+
+r/lectura=4
+w/escritura=2
+x/ejecucion=1
+
+
+	

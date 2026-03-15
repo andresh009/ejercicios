@@ -40,5 +40,27 @@ r/lectura=4
 w/escritura=2
 x/ejecucion=1
 
+los valores se suman para obtener el permiso final
+
+rwx = 4 + 2 + 1 = 7
+rw- = 4 + 2 = 6
+r-x = 4 + 1 = 5
+r-- = 4
+
+en chmod se usan tres numeros
+
+chmod XYZ archivo
+
+x/usuario
+y/grupo
+z/otros
+
+	EJEMPLO
+
+	chmod 000 archivo  (nadie puede leer/escribir/ejecutar)
+	chmod 111 archivo  (todos pueden ejectuar pero no leer ni escribir)
+	chmod 333 archivo  (se puede escribir y ejecutar)
+
+
 
 	

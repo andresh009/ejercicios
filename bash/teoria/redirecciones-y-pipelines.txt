@@ -1,0 +1,119 @@
+GREP
+
+el comando GREP se usa para buscar en un texto
+
+	EJEMPLO
+	
+	grep "error" log.txt
+	busca la palabra error
+
+SORT
+
+ordena lineas alfabeticamente
+	
+	EJEMPLO
+	
+	sort nombre.txt
+
+UNIQ
+
+elimina lineas repetidas
+
+	EJEMPLO
+	
+	uniq lista.txt
+HEAD
+
+muestra las primeras 10 lineas
+
+	EJEMPLO
+
+	head archivo.txt
+
+TAIL
+
+mustra las ultimas 10 lineas
+
+	EJEMPLO
+
+	tail archivo.txt
+
+
+
+ENTRADA/SALIDA/ERROR ESTANDAR
+
+en linux todos los programas usan tres canales basicos de comunicacion 
+
+0 - entrada estandar - stdin - datos que recibe el programa 
+1 - salida estandar - stdout - resultado normal del programa
+2 - erro estandar - stderr - mensajes de error 
+
+
+REDIRECCION DE SALIDA 
+
+permite guardar la salida de un comando en un archivo 
+
+	EJEMPLO 
+	
+	ls > archivo.txt
+	
+	ejecuta ls
+	guarda el resultado en archivo.txt (si el archivo existe se sobrescribe)
+
+	echo "hola" > texto.txt
+
+
+REDIRECCION DE SALIDA ACUMULATIVA
+
+agrega contenido sin borrar lo anterior >>
+
+	EJEMPLO
+
+	echo "Linea 1" > archivo.txt
+	echo "Linea 2" >> archivo.txt
+
+
+REDIRECCION DE ENTRADA 
+
+permite que un comando lea datos desde un archivo <
+
+	EJEMPLO
+
+	wc - cuenta la cantidad de palabra/lineas/caracteres
+
+
+REDIRECCION DE ERRORES
+
+gurada lo errores en un archivo  2>
+
+	EJEMPLO
+	
+	ls archivo-inexistente 2> error.txt
+	
+REDIRIGIR SALIDA Y ERRORES JUNTOS
+
+comando > salida.txt 2>&1
+
+
+PIPES
+
+un pipe conecta la salida de un comando con la entrada de otro 
+
+comando1 | comando2 
+
+	EJEMPLO
+	
+	ls | wc -l 
+
+COMBINACION DE COMANDOS
+
+se pueden encadenar varios comandos
+
+	EJEMPLOS
+	
+	ls -l | grep ".txt"
+
+	ls lista archivos detallados 
+	filtrar los que tienen .txt
+
+

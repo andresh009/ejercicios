@@ -1,0 +1,32 @@
+QUE ES UN SCRIPT??
+
+	Un script es un archivo de texto con comandos de bash que se ejecutan automaticamente, sin tener que escribirlos uno por uno 
+
+
+CREAR EL PRIMER SCRIPT 
+
+
+	nano mi_script.sh
+
+	ejemplo del contenido: 
+		
+		#!/bin/bash
+		echo "hola mundo"
+
+
+SHEBANG(#!/bin/bash)
+
+	Indica que interprete usar para ejecutar el script (en este caso, bash)
+
+EJECUTAR SCRIPTS
+
+	bash mi_script.sh
+
+	./mi_script.sh
+
+PERMISOS DE EJECUCION 
+
+	chmod +x mi_script.sh
+
+
+		

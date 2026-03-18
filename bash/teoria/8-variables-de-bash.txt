@@ -1,0 +1,63 @@
+VARIABLES
+
+permiten guardar datos para reutilizarlos 
+
+
+	nombre="Andres"
+	echo $nombre
+
+	sin espacios: nombre="valor"
+	con $ se accede al valor
+
+VARIABLES DE ENTORNO
+
+Son variables globales del sistema 
+
+	echo $HOME
+	echo $PATH
+
+crear una variable de entorno 
+
+	export MI_VAR="Hola"
+
+EXPASION DE VARIABLES 
+
+Bsh remplaza automaticamente el valor de la varible 
+
+	archivo="datos.txt"
+	echo "El archivo es $archivo"
+
+uso recomendable con llave 
+
+	echo "Ruta: ${HOME}/documentos"
+
+VARIABLES ESPECIALES
+
+se usan en scripts para manejar argumentos
+
+
+	$1   # Primer argumento
+	$2   # Segundo argumento
+	$@   # Todos los argumentos
+	$#   # Cantidad de argumentos
+	$0   # Nombre del script
+
+
+ARGUMENTOS DE SCRIPTS
+
+Permite pasar datos al ejecutar un script 
+
+	#!/bin/bash
+	echo "hola $1"
+	
+	ejecucion:
+
+	./script.sh Andres
+
+	salida:
+
+	Hola Andres
+
+
+
+

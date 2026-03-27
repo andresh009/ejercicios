@@ -1,0 +1,41 @@
+SALIDA (echo)
+
+se usa para mostrar texto en pantalla 
+
+	echo "hola mundo"
+tambien se usa para monstar variables 
+	
+	nombre="andres"
+	echo "hola $nombre"
+
+ENTRADA (read)
+
+permite capturar datos que ingresa el usuario
+
+	read nombre
+	echo "hola $nombre"
+	
+con mensaje incluido 
+
+	read -p "ingresa tu nombre: " nombre
+	echo "hola $nombre"
+
+INTERACCION CON EL USUARIO
+
+combina read y echo para crear scripts interactivas
+
+	echo "cuantos viajes hiciste hoy"
+	read viajes 
+
+	echo "ganancias estimadas: $((viajes*1000))"
+
+CAPTURA DE SALIDA DE COMANDOS 
+
+se puede guardar el resultado de un comando en una variable 
+
+	fecha=$(date)
+	echo "hoy es: $fecha"
+	
+	archivos=$(ls)
+	echo "archivos de carpeta"
+	echo "$archivo"

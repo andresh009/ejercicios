@@ -1,0 +1,34 @@
+OPERADORES ARITMETICOS 
+
+se usan para realizar calculos numericos 
+
+	+ / suma  / ((a+b))
+	- / resta / ((a-b))
+	* / multiplicacion / ((a*b))
+	/ / division / ((a/b)) 
+	% / modulo / ((a%b))
+
+OPERADORES DE COMPARACION 
+
+sirven para comparar valores (numeros) 
+
+	-eq / igual
+	-ne / distinto
+	-gt / mayor que
+	-lt / menor que 
+	-ge / mayor o igual 
+	-le / menor o igual
+
+strings (texto)
+
+	= / igual
+	!= / distinto
+	-z / cadena vacia
+	-n / cadena no vacia 
+
+OPERADORES LOGICOS 
+
+	&& and 
+	! not
+
+

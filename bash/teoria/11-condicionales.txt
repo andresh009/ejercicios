@@ -1,0 +1,48 @@
+IF
+	
+	if [ condicion ];then
+		comando
+	fi
+
+IF ELSE
+	
+	if [ condicion ];then
+		comando 
+	else	
+		comando
+	fi
+
+ELIF
+	
+	if [ condicion ];then
+		comando
+	elif [ condicion ];then
+		comando 
+	else 
+		comando 
+	fi
+
+CASE 
+
+evalua una variables entre varios valores posibles ( mas limpio que varios if )
+
+	case variables in 
+		valor1)
+			comando;;
+		valor2)
+			comando;;
+		*)
+			comando por defecto;;
+	esac
+
+	EJEMPLO
+
+		case $opcion in
+			1)
+				echo "elegiste 1";;
+			2)
+				echo "elegiste 2";;
+			*)
+				echo "opcion invalida";;
+		esac
+

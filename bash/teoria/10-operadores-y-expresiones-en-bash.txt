@@ -30,5 +30,10 @@ OPERADORES LOGICOS
 
 	&& and 
 	! not
+	|| or 
+EXTRA 
+
+	"${nombre,,}" / lo transforma a minusculas 
+	"${nombre^^}" / lo tranforma a mayusculas 
 
 

@@ -57,3 +57,24 @@ while [ $i -le 5 ];do
 	((i++))
 done
 ```
+## UNTIL
+### es lo contrario a while: se ejecuta hasta que la condicion sea verdadera 
+```bash
+i=1
+until [ i -gt 5 ];do
+	echo $i
+	((i++))
+done 
+
+## BUCLES ANIDADOS
+### un bucle dentro de otro 
+
+```bash
+for i in 1 2 3;do 
+	for j in a b c;do 
+		echo "$i - $j"
+	done
+done
+```
+
+

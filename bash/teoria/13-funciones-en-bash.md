@@ -47,17 +47,17 @@ imprimir_todos uno dos tres
 ## RETORNAR VALORES 
 ### bash no retorna valores como otros lenguajes 
 1. codigo de salida(return)
-	```bash
-	es_par() {
-		if (($1%2==0));then
-			return 0
-		else 
-			return 1
-		fi
-	}
-	es_par 4
-	echo $?
-	```
+```bash
+es_par() {
+	if (($1%2==0));then
+		return 0
+	else 
+		return 1
+	fi
+}
+es_par 4
+echo $?
+```
 2. retornar con echo(mas usado)
 ```bash
 sumar() {

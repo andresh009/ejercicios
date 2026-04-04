@@ -65,7 +65,7 @@ until [ i -gt 5 ];do
 	echo $i
 	((i++))
 done 
-
+```
 ## BUCLES ANIDADOS
 ### un bucle dentro de otro 
 

@@ -23,9 +23,9 @@ saludar() {
 }
 saludar "andres"
 ```
-### $1,$2,etc
-### $@ todos los parametros
-### $# cantidad de parametros 
+> $1,$2,etc
+> $@ todos los parametros
+> $# cantidad de parametros 
 
 ## MULTIPLES PARAMETROS 
 ```bash
@@ -81,6 +81,56 @@ mi_funcion() {
 	echo "$nombres"
 }
 ```
-> local solo existe dentro de la funcion
+> local -> solo existe dentro de la funcion
 
+## ORGANIZACION DE SCRIPTS GRANDES 
+### Las funciones ayudan a estructurar mejor el codigo 
 
+```bash
+#!/bin/bash
+
+mostrar_menu() {
+  echo "1. Saludar"
+  echo "2. Salir"
+}
+
+saludar() {
+  echo "Hola $1"
+}
+
+main() {
+  mostrar_menu
+  read opcion
+
+  case $opcion in
+    1) saludar "Usuario" ;;
+    2) exit 0 ;;
+    *) echo "Opción inválida" ;;
+  esac
+}
+
+main
+```
+## Buenas practicas 
+
+1. nombres claros 
+2. usar local siempre que puedas 
+3. separar logica en funciones pequenas
+4. evitar repetir codigo 
+5. crear una funcion main
+
+## Dividir en archivos 
+### puedes reutilizar funciones en otros scripts
+
+```bash
+# archivo: funciones.sh
+saludar() {
+  echo "Hola $1"
+}
+```
+```bash
+# script principal
+source funciones.sh
+
+saludar "Andrés"
+```

@@ -66,4 +66,21 @@ sumar() {
 resultado=$(sumar 1 2)
 echo "resultado: $resultado"
 ```
+## BUEN PATRON 
+```bash
+obtener_fecha() {
+	date + "%y-%m-%d"
+}
+fecha=$(obtener_fecha)
+```
+## VARIABLES LOCALES 
+### evitar conflictos en script grandes
+```bash
+mi_funcion() {
+	local nombres="andres"
+	echo "$nombres"
+}
+```
+> local solo existe dentro de la funcion
+
 

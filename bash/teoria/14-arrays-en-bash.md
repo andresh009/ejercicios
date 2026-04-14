@@ -131,5 +131,115 @@ c=("${a[@]}" "${b[@]}")
 read -a datos
 echo ${datos[@]}
 ```
-2. 
+2. desde comando 
 
+```bash
+
+archivos=($(ls))
+```
+
+3. evitas problemas con espacios 
+
+```bash
+
+mapfile -t archivos < <(ls)
+```
+
+## buenas practicas
+
+1. siempre usar comillas 
+
+```bash
+"${array[@]}"
+```
+
+2. evitar
+
+```bash
+
+${array[*]}
+```
+> usar mapfile en vez de $(comando) cuando hay espacios 
+
+## casos reales (nivel practicos)
+
+1. procesar archivos 
+
+```bash
+
+for archivos in *.txt;do
+	echo "procesando $archivos"
+done 
+
+```
+
+2. validar datos 
+
+```bash
+
+usuarios=("juan" "ana" "pedro")
+
+for u in "${usuarios[@]}";do
+	if [[ $u == "ana" ]];then 	
+		echo "usuario encontrado"
+	fi
+done
+```
+
+## nivel avanzado 
+
+1. subraya (slicing)
+
+```bash
+
+echo ${numeros[@]:1:2} #desde indice 1,2 elementos
+
+```
+
+2. reemplazo en arrays
+
+```bash
+
+echo ${numeros[@]/20/99}
+
+```
+
+3. convertir string en array 
+
+```bash
+
+IFS=',' read -ra datos <<< "a,b,c,d"
+```
+
+4. arrays como parametros 
+
+```bash
+funcion() {
+	local array=("$@")
+	echo ${array[@]}
+
+}
+funcion "${numeros[@]}"
+
+```
+
+## errores comunes 
+
+1. no usar comillas 
+
+```bash
+
+for i in ${array[@]}  # mal 
+
+for i in "${array[@]}" #bien 
+
+```
+2. usar ls 
+
+
+```bash
+files=($(ls))  #peligroso
+
+mapfile -t files < <(ls)
+```
+> mapfile forma segura de cargar datos 

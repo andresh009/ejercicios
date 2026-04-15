@@ -35,5 +35,8 @@ EXTRA
 
 	"${nombre,,}" / lo transforma a minusculas 
 	"${nombre^^}" / lo tranforma a mayusculas 
+	
 
+	$(())  / sirve para imprimir es decir calcula y devuelve el resultado se puede usar con echo 
+	(())   / ejecucion sin devolver un valor 
 
